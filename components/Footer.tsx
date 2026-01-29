@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Download, Github } from 'lucide-react';
+import { Download, Github, Mail, ShieldAlert } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -12,21 +13,36 @@ const Footer: React.FC = () => {
         
         {/* Final CTA */}
         <div className="text-center mb-24">
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Ready to MoltBot Responsibly?</h2>
+          <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 italic tracking-tighter">Ready to MoltBot Responsibly?</h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            5 minutes to a secure setup. No expertise required.
+            5 minutes to a secure setup. No expertise required. Choose the self-hosted script or our managed cloud.
           </p>
           
           <div className="flex flex-col items-center">
-            <button className="px-10 py-5 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold text-lg rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,240,255,0.4)] flex items-center mb-4">
-               <Download className="mr-2 w-6 h-6" />
-               Download Setup Wizard
-            </button>
-            <span className="text-sm text-gray-500">Works on Ubuntu, Debian, and macOS</span>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <button className="px-10 py-5 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold text-lg rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,240,255,0.4)] flex items-center">
+                <Download className="mr-2 w-6 h-6" />
+                Get Setup Script
+              </button>
+              <button className="px-10 py-5 bg-white/5 border border-neon-pink/50 text-neon-pink font-bold text-lg rounded-full hover:scale-105 transition-transform hover:bg-neon-pink/10 flex items-center">
+                <ShieldAlert className="mr-2 w-6 h-6" />
+                Managed Cloud
+              </button>
+            </div>
             
-            <div className="mt-8 flex items-center space-x-2 text-gray-400 hover:text-white transition-colors cursor-pointer">
-               <Github className="w-5 h-5" />
-               <span className="border-b border-gray-600 hover:border-white">View source on GitHub →</span>
+            <div className="flex flex-col items-center gap-2">
+               <span className="text-sm text-gray-500">Need help? <a href="#" className="text-neon-cyan border-b border-neon-cyan/30 hover:border-neon-cyan transition-colors">Book a Security Consultant →</a></span>
+               <div className="flex items-center mt-4 bg-white/5 p-1 pr-4 rounded-full border border-white/10 group focus-within:border-neon-cyan transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3 ml-1">
+                     <Mail className="w-4 h-4 text-gray-400" />
+                  </div>
+                  <input 
+                    type="email" 
+                    placeholder="Security updates in your inbox" 
+                    className="bg-transparent border-none outline-none text-sm text-gray-200 w-48"
+                  />
+                  <button className="text-neon-cyan font-bold text-sm uppercase tracking-widest hover:text-white transition-colors">Join</button>
+               </div>
             </div>
           </div>
         </div>
@@ -38,14 +54,15 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex space-x-6 mb-4 md:mb-0">
-             <a href="#" className="hover:text-neon-cyan transition-colors">GitHub</a>
+             <a href="#" className="hover:text-neon-cyan transition-colors">Enterprise</a>
              <a href="#" className="hover:text-neon-cyan transition-colors">Documentation</a>
              <a href="#" className="hover:text-neon-cyan transition-colors">Security Guide</a>
-             <a href="#" className="hover:text-neon-cyan transition-colors">Report Issue</a>
+             <a href="#" className="hover:text-neon-cyan transition-colors">Privacy</a>
           </div>
 
-          <div className="text-xs">
-            Not affiliated with MoltBot or Anthropic
+          <div className="text-xs text-center md:text-right max-w-xs">
+            Not affiliated with MoltBot or Anthropic. 
+            The setup wizard is free; managed hosting is optional.
           </div>
         </div>
       </div>

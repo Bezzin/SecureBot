@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Download, TerminalSquare, ShieldCheck } from 'lucide-react';
+import { Download, TerminalSquare, ShieldCheck, Server, ExternalLink } from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const HowItWorks: React.FC = () => {
           <p className="text-gray-400">From zero to secure AI assistant in under 5 minutes.</p>
         </div>
 
-        <div className="relative">
+        <div className="relative mb-24">
           {/* Connecting Line (Desktop) */}
           <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-neon-cyan via-purple-500 to-neon-green opacity-30"></div>
 
@@ -55,6 +56,34 @@ const HowItWorks: React.FC = () => {
               <p className="text-sm text-gray-400">MoltBot is running with maximum security defaults applied.</p>
             </div>
           </div>
+        </div>
+
+        {/* Recommended Infrastructure (Monetization: Affiliates) */}
+        <div className="max-w-4xl mx-auto mt-20 p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 relative group">
+           <div className="absolute -top-4 left-8 bg-neon-cyan px-4 py-1 rounded text-black font-bold text-xs uppercase tracking-widest">
+              Recommended Infrastructure
+           </div>
+           <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1">
+                 <h4 className="text-xl font-bold text-white mb-2 flex items-center">
+                    <Server className="w-5 h-5 mr-3 text-neon-cyan" />
+                    Need a server for MoltBot?
+                 </h4>
+                 <p className="text-gray-400 text-sm">
+                    MoltBot runs best on Ubuntu 24.04. We recommend a minimum of 2GB RAM. 
+                    Get $200 credit on DigitalOcean to start for free.
+                 </p>
+              </div>
+              <a 
+                href="https://digitalocean.com" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center space-x-2 px-6 py-3 bg-neon-cyan/10 border border-neon-cyan/40 text-neon-cyan rounded-lg hover:bg-neon-cyan hover:text-black transition-all group/link"
+              >
+                 <span className="font-bold">Deploy to DigitalOcean</span>
+                 <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+              </a>
+           </div>
         </div>
       </div>
     </section>

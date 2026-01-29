@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { TerminalLine } from '../types';
+import type { TerminalLine } from '../types.ts';
 
 const lines: TerminalLine[] = [
   { text: "curl -fsSL https://securebot.setup/install.sh | bash", color: "text-neon-pink", delay: 0 },

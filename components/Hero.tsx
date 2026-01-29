@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Copy, Check, Terminal as TerminalIcon } from 'lucide-react';
-import Terminal from './Terminal';
+import Terminal from './Terminal.tsx';
 
 const words = ["Hacked", "Pwned", "Exposed", "Breached"];
 

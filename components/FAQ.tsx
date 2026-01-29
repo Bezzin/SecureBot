@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { FaqItem } from '../types';
+import type { FaqItem } from '../types.ts';
 
 const faqData: FaqItem[] = [
   {
