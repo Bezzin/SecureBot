@@ -74,10 +74,13 @@ const SecurityTable: React.FC = () => {
         </div>
 
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
-           <button className="w-full md:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-colors">
+           <button onClick={() => document.getElementById('install')?.scrollIntoView({behavior: 'smooth'})} className="w-full md:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-colors">
               Continue with Free Setup
            </button>
-           <button className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-neon-pink to-purple-600 text-white font-bold rounded-lg shadow-[0_0_25px_rgba(255,0,170,0.3)] hover:scale-105 transition-all">
+           <button onClick={() => {
+              const email = prompt("Demand for Managed Cloud is high. We are limiting access to ensure stability.\n\nEnter your email to join the priority waitlist:");
+              if (email) alert(`Spot secured for ${email}. You are #1,402 on the list.`);
+           }} className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-neon-pink to-purple-600 text-white font-bold rounded-lg shadow-[0_0_25px_rgba(255,0,170,0.3)] hover:scale-105 transition-all">
               Launch Managed Cloud Instance
            </button>
         </div>
