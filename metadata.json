@@ -1,0 +1,5 @@
+{
+  "name": "MoltBot Secure Setup",
+  "description": "A security-first installer for the viral MoltBot AI assistant. Features a cyberpunk aesthetic, terminal animations, and secure configuration wizard.",
+  "requestFramePermissions": []
+}
