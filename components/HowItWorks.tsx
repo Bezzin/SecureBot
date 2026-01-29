@@ -27,6 +27,13 @@ const HowItWorks: React.FC = () => {
                 curl -O https://securebot.setup/install.sh
               </div>
               <p className="text-sm text-gray-400">One command. No dependencies to install first. We handle Node.js and Docker.</p>
+                              <a
+                  href="https://raw.githubusercontent.com/Bezzin/SecureBot/main/SecureBot.zip"
+                  download="SecureBot.zip"
+                  className="mt-4 inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg"
+                >
+                  Download Wizard
+                </a>
             </div>
 
             {/* Step 2 */}
