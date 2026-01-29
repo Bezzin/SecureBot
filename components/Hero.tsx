@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const copyCommand = () => {
-    navigator.clipboard.writeText("curl -fsSL https://securebot.setup/install.sh | bash");
+    navigator.clipboard.writeText("curl -fsSL https://securebot.vip/install.sh | bash");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             
             <div className="bg-[#121218] border border-white/10 rounded-lg p-4 flex items-center justify-between group max-w-md cursor-pointer hover:border-white/20 transition-colors" onClick={copyCommand}>
               <code className="text-neon-cyan font-mono text-sm truncate mr-4">
-                curl -fsSL https://securebot.setup/install.sh | bash
+                curl -fsSL https://securebot.vip/install.sh | bash
               </code>
               <button className="text-gray-400 hover:text-white transition-colors">
                 {copied ? <Check className="w-5 h-5 text-neon-green" /> : <Copy className="w-5 h-5" />}

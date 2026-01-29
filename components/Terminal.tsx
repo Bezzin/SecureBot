@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import type { TerminalLine } from '../types.ts';
 
 const lines: TerminalLine[] = [
-  { text: "curl -fsSL https://securebot.setup/install.sh | bash", color: "text-neon-pink", delay: 0 },
+  { text: "curl -fsSL https://securebot.vip/install.sh | bash", color: "text-neon-pink", delay: 0 },
   { text: "🦞 MoltBot Secure Setup Wizard initializing...", color: "text-white", delay: 800 },
   { text: "✓ Node.js 22 installed", color: "text-neon-green", delay: 1500 },
   { text: "✓ Docker configured", color: "text-neon-green", delay: 2000 },

@@ -24,7 +24,7 @@ const HowItWorks: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Download</h3>
               <div className="bg-[#121218] rounded p-3 text-left font-mono text-xs text-gray-300 border border-white/10 mb-4 overflow-x-auto">
-                curl -O https://securebot.setup/install.sh
+                curl -O https://securebot.vip/install.sh
               </div>
               <p className="text-sm text-gray-400">One command. No dependencies to install first. We handle Node.js and Docker.</p>
                               <a
