@@ -2,6 +2,9 @@
 import React from 'react';
 import { Download, TerminalSquare, ShieldCheck, Server, ExternalLink } from 'lucide-react';
 
+// TODO: Replace with your actual DigitalOcean affiliate link
+const DIGITAL_OCEAN_REF_LINK = "https://m.do.co/c/REPLACE_WITH_YOUR_CODE";
+
 const HowItWorks: React.FC = () => {
   return (
     <section id="install" className="py-24 bg-[#050508] relative overflow-hidden">
@@ -82,7 +85,7 @@ const HowItWorks: React.FC = () => {
                  </p>
               </div>
               <a 
-                href="https://digitalocean.com" 
+                href={DIGITAL_OCEAN_REF_LINK}
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center space-x-2 px-6 py-3 bg-neon-cyan/10 border border-neon-cyan/40 text-neon-cyan rounded-lg hover:bg-neon-cyan hover:text-black transition-all group/link"
