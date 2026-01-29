@@ -3,7 +3,7 @@ import React from 'react';
 import { Download, TerminalSquare, ShieldCheck, Server, ExternalLink } from 'lucide-react';
 
 // TODO: Replace with your actual DigitalOcean affiliate link
-const DIGITAL_OCEAN_REF_LINK = "https://m.do.co/c/REPLACE_WITH_YOUR_CODE";
+const DIGITAL_OCEAN_REF_LINK = "https://m.do.co/c/4786b1e30bbc";
 
 const HowItWorks: React.FC = () => {
   return (
