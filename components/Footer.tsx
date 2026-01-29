@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Download, Github, Mail, ShieldAlert } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState('');
   return (
     <footer className="relative bg-black pt-24 pb-12 overflow-hidden">
       {/* Background Gradient Mesh */}
@@ -20,18 +21,18 @@ const Footer: React.FC = () => {
           
           <div className="flex flex-col items-center">
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="px-10 py-5 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold text-lg rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,240,255,0.4)] flex items-center">
+              <button onClick={() => document.getElementById('install')?.scrollIntoView({behavior: 'smooth'})} className="px-10 py-5 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold text-lg rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,240,255,0.4)] flex items-center">
                 <Download className="mr-2 w-6 h-6" />
                 Get Setup Script
               </button>
-              <button className="px-10 py-5 bg-white/5 border border-neon-pink/50 text-neon-pink font-bold text-lg rounded-full hover:scale-105 transition-transform hover:bg-neon-pink/10 flex items-center">
+              <button onClick={() => alert('Managed Cloud solution coming soon!')} className="px-10 py-5 bg-white/5 border border-neon-pink/50 text-neon-pink font-bold text-lg rounded-full hover:scale-105 transition-transform hover:bg-neon-pink/10 flex items-center">
                 <ShieldAlert className="mr-2 w-6 h-6" />
                 Managed Cloud
               </button>
             </div>
             
             <div className="flex flex-col items-center gap-2">
-               <span className="text-sm text-gray-500">Need help? <a href="#" className="text-neon-cyan border-b border-neon-cyan/30 hover:border-neon-cyan transition-colors">Book a Security Consultant →</a></span>
+               <span className="text-sm text-gray-500">Need help? <a href="#" onClick={() => alert('Please email support@securebot.vip to book a security consultant.')} className="text-neon-cyan border-b border-neon-cyan/30 hover:border-neon-cyan transition-colors">Book a Security Consultant →</a></span>
                <div className="flex items-center mt-4 bg-white/5 p-1 pr-4 rounded-full border border-white/10 group focus-within:border-neon-cyan transition-colors">
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3 ml-1">
                      <Mail className="w-4 h-4 text-gray-400" />
@@ -40,8 +41,10 @@ const Footer: React.FC = () => {
                     type="email" 
                     placeholder="Security updates in your inbox" 
                     className="bg-transparent border-none outline-none text-sm text-gray-200 w-48"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                  <button className="text-neon-cyan font-bold text-sm uppercase tracking-widest hover:text-white transition-colors">Join</button>
+                  <button onClick={() => alert(`Submitting email: ${email || 'No email entered'}`)} className="text-neon-cyan font-bold text-sm uppercase tracking-widest hover:text-white transition-colors">Join</button>
                </div>
             </div>
           </div>
@@ -54,10 +57,10 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex space-x-6 mb-4 md:mb-0">
-             <a href="#" className="hover:text-neon-cyan transition-colors">Enterprise</a>
-             <a href="#" className="hover:text-neon-cyan transition-colors">Documentation</a>
-             <a href="#" className="hover:text-neon-cyan transition-colors">Security Guide</a>
-             <a href="#" className="hover:text-neon-cyan transition-colors">Privacy</a>
+             <a href="#" onClick={() => alert('Enterprise solutions coming soon!')} className="hover:text-neon-cyan transition-colors">Enterprise</a>
+             <a href="#" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-neon-cyan transition-colors">Documentation</a>
+             <a href="#" onClick={() => document.getElementById('security')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-neon-cyan transition-colors">Security Guide</a>
+             <a href="#" onClick={() => alert('Privacy Policy coming soon!')} className="hover:text-neon-cyan transition-colors">Privacy</a>
           </div>
 
           <div className="text-xs text-center md:text-right max-w-xs">

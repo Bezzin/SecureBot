@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             </button>
           ))}
           <div className="h-px bg-white/10 my-2"></div>
-          <button className="w-full py-3 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold rounded">
+          <button onClick={() => scrollToSection('install')} className="w-full py-3 bg-gradient-to-r from-neon-cyan to-blue-500 text-black font-bold rounded">
             Get Started
           </button>
         </div>

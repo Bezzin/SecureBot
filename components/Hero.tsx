@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               One-Click Install
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 border border-white/20 hover:bg-white/5 rounded text-white font-medium flex items-center justify-center transition-colors">
+            <button onClick={() => alert('Demo video coming soon!')} className="px-8 py-4 border border-white/20 hover:bg-white/5 rounded text-white font-medium flex items-center justify-center transition-colors">
               <Play className="mr-2 w-5 h-5 fill-current" />
               Watch Demo
             </button>
