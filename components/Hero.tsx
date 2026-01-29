@@ -27,13 +27,7 @@ const Hero: React.FC = () => {
         
         {/* Left Content */}
         <div className="z-10 order-2 lg:order-1">
-          <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 animate-fade-in-up">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-pink opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-pink"></span>
-            </span>
-            <span className="text-xs md:text-sm text-gray-300 font-medium">Featured on Hacker News • 2.4k+ GitHub Stars</span>
-          </div>
+
 
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6 tracking-tight">
             Install MoltBot <br />
